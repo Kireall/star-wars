@@ -1,10 +1,11 @@
 import { Menu } from 'antd';
+import React from 'react';
 
 const items = new Array(1).fill(null).map((_, index) => ({
     key: index + 1,
     label: `nav ${index + 1}`,
 }));
-const MainNavigation = () => {
+export const MainNavigation: React.FC = () => {
     return (
         <Menu
             theme='dark'
@@ -15,5 +16,3 @@ const MainNavigation = () => {
         />
     );
 };
-
-export default MainNavigation;

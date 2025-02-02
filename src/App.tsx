@@ -1,15 +1,19 @@
-import { Typography } from 'antd';
 import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
-import PageLayout from './layouts/PageLayout.tsx';
+import { PageLayout } from './layouts/PageLayout.tsx';
+import { CharacterPage } from './pages/CharacterPage';
+import { HomePage } from './pages/HomePage';
 
-const { Title } = Typography;
-const App: React.FC = () => {
+export const App: React.FC = () => {
     return (
-        <PageLayout>
-            <Title>Star Wars Guide</Title>
-        </PageLayout>
+        <Router>
+            <PageLayout>
+                <Routes>
+                    <Route path='/' element={<HomePage />} />
+                    <Route path='/character/:id' element={<CharacterPage />} />
+                </Routes>
+            </PageLayout>
+        </Router>
     );
 };
-
-export default App;

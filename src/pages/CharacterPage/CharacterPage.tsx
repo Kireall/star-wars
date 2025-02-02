@@ -1,6 +1,7 @@
+import React from 'react';
 import { useParams } from 'react-router-dom';
 
-export const CharacterPage = () => {
+export const CharacterPage: React.FC = () => {
     const { characterId } = useParams();
 
     return (
