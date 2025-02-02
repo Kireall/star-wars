@@ -25,7 +25,7 @@ export const Grid: React.FC<{
     return (
         <Row gutter={[24, 24]}>
             <Row gutter={[24, 24]} style={{ width: '100%' }} justify='end'>
-                <Col span={4}>
+                <Col span={4} xs={{ span: 24 }} sm={{ span: 12 }} lg={{ span: 6 }}>
                     <Search
                         placeholder='input search text'
                         allowClear

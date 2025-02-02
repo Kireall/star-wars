@@ -47,7 +47,7 @@ export const CharacterPage: React.FC = () => {
 
     return (
         <>
-            <Title>Character Page</Title>
+            <Title style={{ marginBottom: 24 }}>Character Page</Title>
             {isEditMode ? (
                 <CharacteristicsForm
                     data={updatedData}
