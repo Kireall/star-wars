@@ -60,7 +60,7 @@ export const Grid: React.FC<{
                             <Card
                                 title={updatedData.name}
                                 bordered={false}
-                                extra={<Link to={`/character/${characterId}`}>Детали</Link>}
+                                extra={<Link to={`/character/${characterId}`}>Details</Link>}
                             >
                                 <p>Gender: {updatedData.gender}</p>
                                 <p>Birth year: {updatedData.birth_year}</p>
