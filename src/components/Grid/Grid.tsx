@@ -1,4 +1,4 @@
-import { Card, Col, Pagination, Row } from 'antd';
+import { Alert, Card, Col, Pagination, Row } from 'antd';
 import Search from 'antd/es/input/Search';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -81,6 +81,16 @@ export const Grid: React.FC<{
                     total={count}
                     showSizeChanger={false}
                     responsive={true}
+                    style={{ margin: 'auto' }}
+                />
+            )}
+
+            {items.length === 0 && (
+                <Alert
+                    message='Nothing has been found'
+                    description={`You are searched for "${search}"`}
+                    type='warning'
+                    showIcon
                     style={{ margin: 'auto' }}
                 />
             )}
